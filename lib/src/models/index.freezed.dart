@@ -17,10 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$AppStateTearOff {
   const _$AppStateTearOff();
 
-  AppState$ call(
-      {List<Movie> movies = const <Movie>[],
-      bool isLoading = false,
-      int page = 1}) {
+  AppState$ call({List<Movie> movies = const <Movie>[], bool isLoading = false, int page = 1}) {
     return AppState$(
       movies: movies,
       isLoading: isLoading,
@@ -39,14 +36,12 @@ mixin _$AppState {
   int get page => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $AppStateCopyWith<AppState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AppStateCopyWith<AppState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AppStateCopyWith<$Res> {
-  factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) =
-      _$AppStateCopyWithImpl<$Res>;
+  factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) = _$AppStateCopyWithImpl<$Res>;
   $Res call({List<Movie> movies, bool isLoading, int page});
 }
 
@@ -83,15 +78,13 @@ class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
 
 /// @nodoc
 abstract class $AppState$CopyWith<$Res> implements $AppStateCopyWith<$Res> {
-  factory $AppState$CopyWith(AppState$ value, $Res Function(AppState$) then) =
-      _$AppState$CopyWithImpl<$Res>;
+  factory $AppState$CopyWith(AppState$ value, $Res Function(AppState$) then) = _$AppState$CopyWithImpl<$Res>;
   @override
   $Res call({List<Movie> movies, bool isLoading, int page});
 }
 
 /// @nodoc
-class _$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
-    implements $AppState$CopyWith<$Res> {
+class _$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res> implements $AppState$CopyWith<$Res> {
   _$AppState$CopyWithImpl(AppState$ _value, $Res Function(AppState$) _then)
       : super(_value, (v) => _then(v as AppState$));
 
@@ -124,8 +117,7 @@ class _$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AppState$ implements AppState$ {
-  const _$AppState$(
-      {this.movies = const <Movie>[], this.isLoading = false, this.page = 1});
+  const _$AppState$({this.movies = const <Movie>[], this.isLoading = false, this.page = 1});
 
   @JsonKey(defaultValue: const <Movie>[])
   @override
@@ -153,21 +145,16 @@ class _$AppState$ implements AppState$ {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(movies),
-      const DeepCollectionEquality().hash(isLoading),
-      const DeepCollectionEquality().hash(page));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(movies),
+      const DeepCollectionEquality().hash(isLoading), const DeepCollectionEquality().hash(page));
 
   @JsonKey(ignore: true)
   @override
-  $AppState$CopyWith<AppState$> get copyWith =>
-      _$AppState$CopyWithImpl<AppState$>(this, _$identity);
+  $AppState$CopyWith<AppState$> get copyWith => _$AppState$CopyWithImpl<AppState$>(this, _$identity);
 }
 
 abstract class AppState$ implements AppState {
-  const factory AppState$({List<Movie> movies, bool isLoading, int page}) =
-      _$AppState$;
+  const factory AppState$({List<Movie> movies, bool isLoading, int page}) = _$AppState$;
 
   @override
   List<Movie> get movies;
@@ -177,8 +164,7 @@ abstract class AppState$ implements AppState {
   int get page;
   @override
   @JsonKey(ignore: true)
-  $AppState$CopyWith<AppState$> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AppState$CopyWith<AppState$> get copyWith => throw _privateConstructorUsedError;
 }
 
 Movie _$MovieFromJson(Map<String, dynamic> json) {
@@ -216,8 +202,7 @@ mixin _$Movie {
 
 /// @nodoc
 abstract class $MovieCopyWith<$Res> {
-  factory $MovieCopyWith(Movie value, $Res Function(Movie) then) =
-      _$MovieCopyWithImpl<$Res>;
+  factory $MovieCopyWith(Movie value, $Res Function(Movie) then) = _$MovieCopyWithImpl<$Res>;
   $Res call({String movie, String image});
 }
 
@@ -249,17 +234,14 @@ class _$MovieCopyWithImpl<$Res> implements $MovieCopyWith<$Res> {
 
 /// @nodoc
 abstract class $Movie$CopyWith<$Res> implements $MovieCopyWith<$Res> {
-  factory $Movie$CopyWith(Movie$ value, $Res Function(Movie$) then) =
-      _$Movie$CopyWithImpl<$Res>;
+  factory $Movie$CopyWith(Movie$ value, $Res Function(Movie$) then) = _$Movie$CopyWithImpl<$Res>;
   @override
   $Res call({String movie, String image});
 }
 
 /// @nodoc
-class _$Movie$CopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res>
-    implements $Movie$CopyWith<$Res> {
-  _$Movie$CopyWithImpl(Movie$ _value, $Res Function(Movie$) _then)
-      : super(_value, (v) => _then(v as Movie$));
+class _$Movie$CopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res> implements $Movie$CopyWith<$Res> {
+  _$Movie$CopyWithImpl(Movie$ _value, $Res Function(Movie$) _then) : super(_value, (v) => _then(v as Movie$));
 
   @override
   Movie$ get _value => super._value as Movie$;
@@ -287,8 +269,7 @@ class _$Movie$CopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res>
 class _$Movie$ implements Movie$ {
   const _$Movie$({required this.movie, required this.image});
 
-  factory _$Movie$.fromJson(Map<String, dynamic> json) =>
-      _$$Movie$FromJson(json);
+  factory _$Movie$.fromJson(Map<String, dynamic> json) => _$$Movie$FromJson(json);
 
   @override
   final String movie;
@@ -310,15 +291,12 @@ class _$Movie$ implements Movie$ {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(movie),
-      const DeepCollectionEquality().hash(image));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(movie), const DeepCollectionEquality().hash(image));
 
   @JsonKey(ignore: true)
   @override
-  $Movie$CopyWith<Movie$> get copyWith =>
-      _$Movie$CopyWithImpl<Movie$>(this, _$identity);
+  $Movie$CopyWith<Movie$> get copyWith => _$Movie$CopyWithImpl<Movie$>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -327,8 +305,7 @@ class _$Movie$ implements Movie$ {
 }
 
 abstract class Movie$ implements Movie {
-  const factory Movie$({required String movie, required String image}) =
-      _$Movie$;
+  const factory Movie$({required String movie, required String image}) = _$Movie$;
 
   factory Movie$.fromJson(Map<String, dynamic> json) = _$Movie$.fromJson;
 

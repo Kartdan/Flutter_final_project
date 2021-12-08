@@ -17,7 +17,7 @@ void main() {
     reducer,
     initialState: const AppState(),
     middleware: <Middleware<AppState>>[
-          (Store<AppState> store, dynamic action, NextDispatcher next) {
+      (Store<AppState> store, dynamic action, NextDispatcher next) {
         next(action);
       },
       EpicMiddleware<AppState>(epics.epics),

@@ -4,7 +4,6 @@ import '../actions/get_movies_and_images.dart';
 import '../data/movies_images_api.dart';
 import '../models/index.dart';
 
-
 class AppEpics {
   AppEpics(this.api);
   final MIApi api;

@@ -4,8 +4,8 @@ import '../models/index.dart';
 part 'get_movies_and_images.freezed.dart';
 
 @freezed
-class GetMovies with _$GetMovies{
-  const factory GetMovies(void Function(dynamic action)result) = GetMoviesStart;
+class GetMovies with _$GetMovies {
+  const factory GetMovies(void Function(dynamic action) result) = GetMoviesStart;
 
   const factory GetMovies.successful(List<Movie> movies) = GetMoviesSuccessful;
 

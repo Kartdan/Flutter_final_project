@@ -54,7 +54,6 @@ class _HomePageState extends State<HomePage> {
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,23 +77,23 @@ class _HomePageState extends State<HomePage> {
             controller: controller,
             itemCount: movies.length,
             itemBuilder: (BuildContext context, int index) {
-                final String title = movies[index].movie;
-                final String image = movies[index].image;
-                return Column(
-                  children: [
-                    Container(
-                      constraints: BoxConstraints.expand(
-                        height: Theme.of(context).textTheme.headline4!.fontSize! * 1.1 + 100.0,
-                      ),
-                      padding: const EdgeInsets.all(8.0),
-                      color: Colors.grey,
-                      alignment: Alignment.center,
-                      transform: Matrix4.rotationZ(0.1),
-                      child: Text(title, style: const TextStyle(fontSize: 15)),
+              final String title = movies[index].movie;
+              final String image = movies[index].image;
+              return Column(
+                children: [
+                  Container(
+                    constraints: BoxConstraints.expand(
+                      height: Theme.of(context).textTheme.headline4!.fontSize! * 1.1 + 100.0,
                     ),
-                    Image.network(image),
-                  ],
-                );
+                    padding: const EdgeInsets.all(8.0),
+                    color: Colors.grey,
+                    alignment: Alignment.center,
+                    transform: Matrix4.rotationZ(0.1),
+                    child: Text(title, style: const TextStyle(fontSize: 15)),
+                  ),
+                  Image.network(image),
+                ],
+              );
             },
           );
         },
