@@ -17,12 +17,12 @@ class MIApi {
     if (response.statusCode != 200) {
       throw StateError('Error fetching the movies.');
     }
-    final Map<String, dynamic> body = jsonDecode(response.body);
+    final Map<String, dynamic> body = jsonDecode(response.body) as Map<String, dynamic>;
     final Map<String, dynamic> data = body['data'] as Map<String, dynamic>;
     final List<dynamic> movies = data['movies'] as List<dynamic>;
 
     return movies //
-        .map((dynamic item) => Movie(movie: item['title'], image: item['medium_cover_image']))
+        .map((dynamic item) => Movie(movie: item['title'] as String, image: item['medium_cover_image'] as String))
         .toList();
   }
 }

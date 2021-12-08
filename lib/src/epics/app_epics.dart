@@ -17,7 +17,7 @@ class AppEpics {
 
   Stream<dynamic> getMovies(Stream<GetMoviesStart> actions, EpicStore<AppState> store) {
     return actions //
-        .flatMap((GetMoviesStart action) => Stream<void>.value(null)
+        .flatMap<void>((GetMoviesStart action) => Stream<void>.value(null)
             .asyncMap((_) => api.getMovies(store.state.page))
             .map<Object>((List<Movie> movies) => GetMovies.successful(movies))
             .onErrorReturnWith((error, stackTrace) => GetMovies.error(error, stackTrace))
